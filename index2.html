@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23BCP225 - Portfolio</title>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font --><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load Font Awesome for icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': {
+                            '50': '#eff6ff',
+                            '100': '#dbeafe',
+                            '200': '#bfdbfe',
+                            '300': '#93c5fd',
+                            '400': '#60a5fa',
+                            '500': '#3b82f6',
+                            '600': '#2563eb',
+                            '700': '#1d4ed8',
+                            '800': '#1e40af',
+                            '900': '#1e3a8a',
+                            '950': '#172554',
+                        },
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for a more modern look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800">
+
+    <!-- Header & Navigation --><nav class="sticky top-0 z-50 bg-white/95 shadow-sm backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Name --><div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-bold text-primary-700">23BCP225 - Digital Portfolio</a>
+                </div>
+                <!-- Navigation Links (Desktop) --><div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#philosophy" class="text-slate-600 hover:bg-slate-100 hover:text-primary-700 px-3 py-2 rounded-md text-sm font-medium">Philosophy</a>
+                        <a href="#resume" class="text-slate-600 hover:bg-slate-100 hover:text-primary-700 px-3 py-2 rounded-md text-sm font-medium">Resume</a>
+                        <a href="#projects" class="text-slate-600 hover:bg-slate-100 hover:text-primary-700 px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#skills" class="text-slate-600 hover:bg-slate-100 hover:text-primary-700 px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#experience" class="text-slate-600 hover:bg-slate-100 hover:text-primary-700 px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <a href="#contact" class="bg-primary-600 text-white hover:bg-primary-700 px-4 py-2 rounded-md text-sm font-medium shadow-md transition-colors">Contact</a>
+                    </div>
+                </div>
+                <!-- Mobile Menu Button --><div class="-mr-2 flex md:hidden">
+                    <button id="mobile-menu-button" type="button" class="bg-slate-100 inline-flex items-center justify-center p-2 rounded-md text-slate-500 hover:text-primary-700 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i id="menu-icon-open" class="fa-solid fa-bars h-6 w-6 block"></i>
+                        <i id="menu-icon-close" class="fa-solid fa-times h-6 w-6 hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu --><div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#philosophy" class="text-slate-600 hover:bg-slate-100 hover:text-primary-700 block px-3 py-2 rounded-md text-base font-medium">Philosophy</a>
+                <a href="#resume" class="text-slate-600 hover:bg-slate-100 hover:text-primary-700 block px-3 py-2 rounded-md text-base font-medium">Resume</a>
+                <a href="#projects" class="text-slate-600 hover:bg-slate-100 hover:text-primary-700 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="#skills" class="text-slate-600 hover:bg-slate-100 hover:text-primary-700 block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#experience" class="text-slate-600 hover:bg-slate-100 hover:text-primary-700 block px-3 py-2 rounded-md text-base font-medium">Experience</a>
+                <a href="#contact" class="bg-primary-600 text-white hover:bg-primary-700 block px-3 py-2 rounded-md text-base font-medium shadow-md transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Section 1: Cover Page (Hero) --><section id="home" class="bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <!-- Text Content --><div class="md:w-3/5 text-center md:text-left">
+                        <h1 class="text-5xl md:text-6xl font-bold text-slate-900 leading-tight">
+                            Shardul Jani
+                        </h1>
+                        <p class="mt-4 text-2xl text-primary-700 font-medium">
+                            B.Tech in Computer Engineering
+                        </p>
+                        <p class="mt-4 text-lg text-slate-600">
+                            Pandit Deendayal Energy University (PDEU)
+                        </p>
+                        <div class="mt-10 flex gap-4 justify-center md:justify-start">
+                             <a href="#projects" class="px-6 py-3 bg-primary-600 text-white rounded-lg shadow-md hover:bg-primary-700 transition-all text-lg font-semibold">View Projects</a>
+                             <a href="#resume" class="px-6 py-3 bg-slate-100 text-slate-700 rounded-lg shadow-md hover:bg-slate-200 transition-all text-lg font-semibold">View Resume</a>
+                        </div>
+                    </div>
+                    <!-- Professional Photograph --><div class="md:w-2/5">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQHfD-u34Jgrzg/profile-displayphoto-shrink_200_200/B4DZQUS6QTGkAc-/0/1735507289908?e=2147483647&v=beta&t=Quy07k5-LWTmrV_QtO2JFx7r7hdDQjECJ2X8fj_qR3o" 
+                             alt="Professional photograph of Shardul Jani" 
+                             class="w-80 h-80 md:w-96 md:h-96 rounded-full object-cover shadow-2xl mx-auto border-8 border-white">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Introduction & Learning Philosophy --><section id="philosophy" class="py-24 bg-slate-100">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold text-slate-900">Introduction & Learning Philosophy</h2>
+                <div class="w-24 h-1.5 bg-primary-600 mx-auto mt-6 mb-8"></div>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    My approach to engineering is built on a foundation of persistent curiosity and a drive for practical problem-solving. I believe that the most impactful solutions arise from a blend of strong technical fundamentals and a creative, interdisciplinary mindset. This portfolio shares my academic journey, the projects I've built, and the values that guide my work as I aim to tackle real-world challenges.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 3: Resume/CV --><section id="resume" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-slate-900 text-center">Resume / CV</h2>
+                <div class="w-24 h-1.5 bg-primary-600 mx-auto mt-6 mb-16"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Column 1: Education & Experience --><div>
+                        <h3 class="text-2xl font-semibold text-primary-800 mb-6 border-b-2 border-primary-200 pb-2">Education</h3>
+                        <div class="mb-6">
+                            <h4 class="text-xl font-bold text-slate-900">B.Tech in Computer Engineering</h4>
+                            <p class="text-md font-medium text-slate-600">Pandit Deendayal Energy University (PDEU) | 2023 - 2027</p>
+                            <p class="mt-2 text-slate-500">Relevant Coursework: Data Structures & Algorithms, AI/ML, Database Management, Object-Oriented Programming, Web Development.</p>
+                        </div>
+                        
+                        <h3 class="text-2xl font-semibold text-primary-800 mt-12 mb-6 border-b-2 border-primary-200 pb-2">Work Experience</h3>
+                        <div class="space-y-6">
+                            <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                                <h4 class="text-xl font-bold text-slate-900">AI/ML Intern</h4>
+                                <p class="text-md font-medium text-slate-600">DataGenius AI | May 2025</p>
+                                <p class="mt-2 text-slate-500">Assisted in developing and testing CNN models for medical image analysis, focusing on data preprocessing and model validation.</p>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                                <h4 class="text-xl font-bold text-slate-900">Software Developer Intern</h4>
+                                <p class="text-md font-medium text-slate-600">TechSolutions Inc | June 2024</p>
+                                <p class="mt-2 text-slate-500">Contributed to a client-facing web application using React and Node.js. Developed API endpoints and built responsive UI components.</p>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                                <h4 class="text-xl font-bold text-slate-900">Civil & Social Intern</h4>
+                                <p class="text-md font-medium text-slate-600">Nirvana Sangh Foundation | May 2024</p>
+                                <p class="mt-2 text-slate-500">Developed a community outreach portal to manage volunteer data and track social impact metrics, streamlining administrative processes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Skills --><div>
+                        <h3 class="text-2xl font-semibold text-primary-800 mb-6 border-b-2 border-primary-200 pb-2">Skills</h3>
+                        
+                        <h4 class="text-xl font-bold text-slate-900 mb-4">Technical Skills</h4>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">TensorFlow</span>
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">Scikit-learn</span>
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">Java</span>
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">SQL</span>
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">React.js</span>
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">MongoDB</span>
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">Git & GitHub</span>
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">Docker</span>
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">AWS (Basic)</span>
+                        </div>
+
+                        <h4 class="text-xl font-bold text-slate-900 mb-4">Soft Skills</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">Leadership</span>
+                            <span class="bg-slate-100 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">Agile Methodologies</span>
+                            <span class="bg-slate-100 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">Problem-Solving</span>
+                            <span class="bg-slate-100 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">Public Speaking</span>
+                            <span class="bg-slate-100 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">Cross-functional Communication</span>
+                        </div>
+                        
+                        <div class="mt-12 p-6 bg-slate-50 rounded-lg border border-slate-200">
+                            <h4 class="text-xl font-bold text-slate-900 mb-3">Other Achievements</h4>
+                            <ul class="list-disc list-inside text-slate-600 space-y-1">
+                                <li>Certifications</li>
+                                <li>Trinity College of London - Rock and Pop - O Grade in Piano</li>
+                                <li>Trinity College of London - Rock and Pop - A+ Grade in Guitar</li>
+                                <li>Co-Curricular Activities - 3rd Rank in Powerlifting (District Round)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Interdisciplinary Projects --><section id="projects" class="py-24 bg-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-slate-900 text-center">Interdisciplinary Projects</h2>
+                <div class="w-24 h-1.5 bg-primary-600 mx-auto mt-6 mb-16"></div>
+                
+                <div class="space-y-16">
+                    <!-- Project 1 --><div class="flex flex-col md:flex-row items-center gap-8 bg-white p-8 rounded-xl shadow-lg">
+                        <div class="md:w-1/2">
+                            <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-55972-4/MediaObjects/41598_2019_55972_Fig1_HTML.png" alt="Abstract data visualization of a neural network" class="w-full h-auto rounded-lg object-contain shadow-md">
+                        </div>
+                        <div class="md:w-1/2">
+                            <span class="text-sm font-semibold text-primary-600 uppercase">Featured Project</span>
+                            <h3 class="text-3xl font-bold text-slate-900 mt-2 mb-4">CNN for Cancer Detection</h3>
+                            <ul class="space-y-3 text-slate-600">
+                                <li><strong><i class="fa-solid fa-bullseye w-5 text-primary-700"></i> Objectives:</strong> Develop CNN models to detect ovarian and cervical cancers from medical imaging.</li>
+                                <li><strong><i class="fa-solid fa-microscope w-5 text-primary-700"></i> Methodologies:</strong> Utilized CNN-based radiomics to extract features from extensive MRI/CT scan datasets.</li>
+                                <li><strong><i class="fa-solid fa-chart-line w-5 text-primary-700"></i> Outcomes:</strong> Achieved high accuracy (88%+) in early-stage detection, demonstrating potential for clinical aid.</li>
+                                <li><strong><i class="fa-solid fa-shield-halved w-5 text-primary-700"></i> Challenges:</strong> Managing large-scale, imbalanced image datasets and mitigating model overfitting through data augmentation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 --><div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-8 rounded-xl shadow-lg">
+                        <div class="md:w-1/2">
+                            <img src="https://media.istockphoto.com/id/697459980/vector/colorful-teamwork-people-business-identity-card.jpg?s=612x612&w=0&k=20&c=oLQzIt3KBd_Fn63xwSf6oAetkqund7-m2Zxr1sunDGU=" alt="Community Outreach Portal Mockup" class="w-full h-auto rounded-lg object-contain shadow-md">
+                        </div>
+                        <div class="md:w-1/2">
+                            <span class="text-sm font-semibold text-primary-600 uppercase">Web Development</span>
+                            <h3 class="text-3xl font-bold text-slate-900 mt-2 mb-4">Community Outreach Portal</h3>
+                            <ul class="space-y-3 text-slate-600">
+                                <li><strong><i class="fa-solid fa-bullseye w-5 text-primary-700"></i> Objectives:</strong> Design and deploy a full-stack web app for the Nirvana Foundation to manage volunteers.</li>
+                                <li><strong><i class="fa-solid fa-file-code w-5 text-primary-700"></i> Methodologies:</strong> Built with a React front-end, Node.js/Express back-end, and MongoDB database.</li>
+                                <li><strong><i class="fa-solid fa-chart-line w-5 text-primary-700"></i> Outcomes:</strong> Increased volunteer sign-ups by 40% and streamlined event management for staff.</li>
+                                <li><strong><i class="fa-solid fa-shield-halved w-5 text-primary-700"></i> Challenges:</strong>
+                                Ensuring high availability and data security for a non-technical, volunteer-based user group.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Advanced Skills & Experience --><section id="skills" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-slate-900 text-center">Advanced Skill Development</h2>
+                <div class="w-24 h-1.5 bg-primary-600 mx-auto mt-6 mb-16"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Skill 1 --><div class="bg-slate-50 p-8 rounded-xl shadow-md border border-slate-200 text-center">
+                        <i class="fa-solid fa-brain text-5xl text-primary-600 mb-6"></i>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Deep Learning</h3>
+                        <p class="text-slate-600">Deployed Convolutional Neural Networks (CNNs) for complex image recognition tasks.</p>
+                    </div>
+                    <!-- Skill 2 --><div class="bg-slate-50 p-8 rounded-xl shadow-md border border-slate-200 text-center">
+                        <i class="fa-solid fa-bullhorn text-5xl text-primary-600 mb-6"></i>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Advanced Communication</h3>
+                        <p class="text-slate-600">Presented technical research and project outcomes at 3 national-level university conferences.</p>
+                    </div>
+                    <!-- Skill 3 --><div class="bg-slate-50 p-8 rounded-xl shadow-md border border-slate-200 text-center">
+                        <i class="fa-solid fa-lightbulb text-5xl text-primary-600 mb-6"></i>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Design Thinking</h3>
+                        <p class="text-slate-600">Led a human-centered design workshop to brainstorm and prototype a new mobile app concept.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Collaborative & Leadership Experience --><section id="experience" class="py-24 bg-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold text-slate-900">Collaborative & Leadership</h2>
+                        <div class="w-24 h-1.5 bg-primary-600 mt-6 mb-8"></div>
+                        <div class="space-y-4 text-lg text-slate-600">
+                            <p><strong>Role:</strong> Scrum Master, Senior Capstone Project</p>
+                            <p><strong>Team Dynamics:</strong> Led a diverse team of 5 engineers. I was responsible for facilitating daily stand-ups, managing sprint planning, and removing blockers for the team.</p>
+                            <p><strong>Conflict Resolution:</strong> Mediated a significant disagreement on technical architecture by creating a neutral decision matrix, which allowed the team to objectively select the best path forward.</p>
+                            <p><strong>Achievement:</strong> Our team successfully delivered the project 2 weeks ahead of schedule and were awarded 'Best Capstone Project' by the department faculty.</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="data:image/png;base64,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" alt="Team collaborating" class="w-full h-auto rounded-xl shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Global & Ethical Awareness --><section id="ethics" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold text-slate-900">Global & Ethical Awareness</h2>
+                        <div class="w-24 h-1.5 bg-primary-600 mt-6 mb-8"></div>
+                        <div class="space-y-4 text-lg text-slate-600">
+                            <p><strong>Case Study:</strong> Algorithmic Bias in Medical Imaging</p>
+                            <p><strong>Analysis:</strong> During my CNN project, I audited the initial dataset and discovered significant under-representation of certain demographic groups, which could lead to biased diagnostic performance.</p>
+                            <p><strong>Ethical Implication:</strong> A biased model could fail to detect disease in under-represented populations, directly causing harm and exacerbating health inequities.</p>
+                            <p><strong>Reflection:</strong> This experience reinforced my responsibility as an engineer to not just build accurate models, but to build equitable and fair ones. I learned that ethical considerations must be part of the design process from day one, not an afterthought.</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://thumbs.dreamstime.com/b/conversation-shifted-to-global-impact-data-usage-ethical-issues-relating-cultural-sensitivity-human-rights-319513173.jpg" alt="AI Ethics Concept" class="w-full h-auto rounded-xl shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Future Aspirations --><section id="aspirations" class="py-24 bg-slate-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-slate-900 text-center">Future Aspirations</h2>
+                <div class="w-24 h-1.5 bg-primary-600 mx-auto mt-6 mb-16"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Goal 1 --><div class="bg-white p-8 rounded-xl shadow-lg">
+                        <i class="fa-solid fa-briefcase text-5xl text-primary-600 mb-6"></i>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Short-Term Goal</h3>
+                        <p class="text-slate-600">Secure a role as a Machine Learning Engineer at a tech-forward company focused on healthcare or social good.</p>
+                    </div>
+                    <!-- Goal 2 --><div class="bg-white p-8 rounded-xl shadow-lg">
+                        <i class="fa-solid fa-book-open text-5xl text-primary-600 mb-6"></i>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Long-Term Goal</h3>
+                        <p class="text-slate-600">Lead an AI ethics and safety research team to help shape and guide responsible technology development.</p>
+                    </div>
+                    <!-- Goal 3 --><div class="bg-white p-8 rounded-xl shadow-lg">
+                        <i class="fa-solid fa-arrow-trend-up text-5xl text-primary-600 mb-6"></i>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Continuous Improvement</h3>
+                        <p class="text-slate-600">Pursue an advanced certification in cloud computing (AWS) and deepen my knowledge of MLOps and production-level ML.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Conclusion & SWOT --><section id="conclusion" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-slate-900 text-center">Conclusion & Self-Assessment</h2>
+                <div class="w-24 h-1.5 bg-primary-600 mx-auto mt-6 mb-16"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-8 bg-blue-50 border border-blue-200 rounded-lg">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-3">Strengths</h3>
+                        <ul class="list-disc list-inside text-blue-700 space-y-1">
+                            <li>Strong technical foundation in ML and deep learning.</li>
+                            <li>Proven interdisciplinary problem-solver.</li>
+                            <li>Effective communicator and proven team leader.</li>
+                        </ul>
+                    </div>
+                    <div class="p-8 bg-yellow-50 border border-yellow-200 rounded-lg">
+                        <h3 class="text-2xl font-bold text-yellow-900 mb-3">Weaknesses</h3>
+                        <ul class="list-disc list-inside text-yellow-700 space-y-1">
+                            <li>Tendency to over-commit to new, interesting projects.</li>
+                            <li>Need to deepen front-end skills for full-stack visualizations.</li>
+                        </ul>
+                    </div>
+                    <div class="p-8 bg-green-50 border border-green-200 rounded-lg">
+                        <h3 class="text-2xl font-bold text-green-900 mb-3">Opportunities</h3>
+                        <ul class="list-disc list-inside text-green-700 space-y-1">
+                            <li>Rapid growth of the ethical AI and MedTech fields.</li>
+                            <li>Increasing availability of complex, open-source datasets.</li>
+                            <li>Global demand for engineers with ML skills.</li>
+                        </ul>
+                    </div>
+                    <div class="p-8 bg-red-50 border border-red-200 rounded-lg">
+                        <h3 class="text-2xl font-bold text-red-900 mb-3">Threats</h3>
+                        <ul class="list-disc list-inside text-red-700 space-y-1">
+                            <li>Extremely rapid pace of technological change.</li>
+                            <li>High competition for specialized ML roles.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: Testimonial --><section id="testimonial" class="py-24 bg-primary-800 text-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <i class="fa-solid fa-quote-left text-5xl text-primary-400 mb-6"></i>
+                <p class="text-3xl font-medium leading-relaxed">
+                    Shardul's analytical rigor and collaborative spirit were invaluable. He possesses a rare ability to translate complex data into a clear, compelling narrative.
+                </p>
+                <p class="mt-8 text-xl font-bold">
+                    — Dr. Kinjal Jani
+                </p>
+                <p class="text-md text-primary-200">
+                    Director, HCG Cancer Centre
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer --><footer id="contact" class="bg-slate-900 text-slate-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- About --><div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Shardul Jani</h3>
+                    <p class="text-slate-400">
+                        Computer Engineering student at PDEU passionate about machine learning, ethical AI, and building impactful technology.
+                    </p>
+                </div>
+                <!-- Quick Links --><div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#philosophy" class="hover:text-primary-300">Philosophy</a></li>
+                        <li><a href="#resume" class="hover:text-primary-300">Resume</a></li>
+                        <li><a href="#projects" class="hover:text-primary-300">Projects</a></li>
+                        <li><a href="#skills" class="hover:text-primary-300">Skills</a></li>
+                    </ul>
+                </div>
+                <!-- Contact --><div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-primary-300"><i class="fa-solid fa-envelope w-6"></i> 23BCP225@sot.pdpu.ac.in</a></li>
+                        <li><a href="https://www.linkedin.com/in/shardul-jani-58b042248/" class="hover:text-primary-300"><i class="fa-brands fa-linkedin w-6"></i>linkedin.com/in/skj247</a></li>
+                        <li><a href="github.com/SKJ247" class="hover:text-primary-300"><i class="fa-brands fa-github w-6"></i> github.com/SKJ247</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-slate-700 pt-8 text-center text-sm text-slate-500">
+                <p>&copy; November 2025 - Made by Shardul Jani, 23BCP225, as an assignment for Communication Skills - III</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button --><button id="to-top-button"
+        class="hidden fixed bottom-6 right-6 bg-primary-600 text-white p-3 rounded-full shadow-lg hover:bg-primary-700 transition-all focus:outline-none"
+        aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up h-5 w-5"></i>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                iconOpen.classList.toggle('hidden');
+                iconClose.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when a link is clicked
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    mobileMenu.classList.add('hidden');
+                    iconOpen.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
+                }
+            });
+
+            // Back to Top button
+            const toTopButton = document.getElementById('to-top-button');
+
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    toTopButton.classList.remove('hidden');
+                } else {
+                    toTopButton.classList.add('hidden');
+                }
+            });
+
+            toTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
